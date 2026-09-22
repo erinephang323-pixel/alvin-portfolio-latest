@@ -1,0 +1,3 @@
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+const videos=[...document.querySelectorAll('video')];const videoObserver=new IntersectionObserver(entries=>entries.forEach(e=>{const v=e.target;if(e.isIntersecting){v.play().catch(()=>{})}else if(v.id!=='heroVideo'){v.pause()}}),{threshold:.18});videos.forEach(v=>videoObserver.observe(v));
+const hero=document.getElementById('heroVideo'),sound=document.getElementById('soundBtn');sound.addEventListener('click',()=>{hero.muted=!hero.muted;sound.textContent=hero.muted?'Sound Off':'Sound On';hero.play().catch(()=>{})});
