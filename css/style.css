@@ -112,31 +112,6 @@ button{
   background:#dfe8f4;
 }
 
-.hero-video:after{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  /*
-    Much lighter overlay.
-    The person remains visible.
-  */
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(247,249,252,.92) 0%,
-      rgba(247,249,252,.62) 20%,
-      rgba(247,249,252,.20) 42%,
-      rgba(247,249,252,0) 68%
-    ),
-    linear-gradient(
-      0deg,
-      rgba(8,12,18,.20),
-      transparent 35%
-    );
-}
-
 .hero-video video{
   width:100%;
   height:100%;
